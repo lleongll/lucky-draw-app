@@ -1,0 +1,11 @@
+.Wrapper {
+  height: 50vh;
+}
+
+#showData {
+  height: 100%;
+}
+
+input[type='file'] {
+  display: none;
+}
