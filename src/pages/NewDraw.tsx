@@ -85,9 +85,6 @@ class NewDraw extends Component {
               <button>Draw!</button>
             </Link>
           </div>
-          <div className="Hello">
-            <BackButton />
-          </div>
         </div>
       );
     } else {
@@ -99,11 +96,6 @@ class NewDraw extends Component {
               <p>File must be in Excel format.</p>
             </span>
           </div>
-
-          <div className="Hello">
-            {/* <this.goBack /> */}
-            <BackButton />
-          </div>
         </div>
       );
     }
@@ -112,19 +104,22 @@ class NewDraw extends Component {
   render() {
     return (
       <div>
+        <div className="Hello">{this.fileData()}</div>
         <div className="Hello">
           <label id="fileUploadLabel">
             <input
               id="fileUpload"
               type="file"
-              accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+              accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
               multiple={false}
               onChange={this.handleFileChange}
             />
             Open File
           </label>
         </div>
-        <div className="Hello">{this.fileData()}</div>
+        <div className="Hello">
+          <BackButton />
+        </div>
       </div>
     );
   }
