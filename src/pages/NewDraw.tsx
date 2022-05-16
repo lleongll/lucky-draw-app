@@ -104,7 +104,6 @@ class NewDraw extends Component {
   render() {
     return (
       <div>
-        <div className="Hello">{this.fileData()}</div>
         <div className="Hello">
           <label id="fileUploadLabel">
             <input
@@ -117,6 +116,7 @@ class NewDraw extends Component {
             Open File
           </label>
         </div>
+        <div className="Hello">{this.fileData()}</div>
         <div className="Hello">
           <BackButton />
         </div>
