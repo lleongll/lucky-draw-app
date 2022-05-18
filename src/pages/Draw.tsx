@@ -28,7 +28,7 @@ const Draw = () => {
       let result = dataArray[randomIndex];
 
       if (Array.isArray(result)) {
-        result = dataArray[randomIndex].join(' ');
+        result = dataArray[randomIndex][0];
       }
 
       setDrawResult(result);
@@ -57,15 +57,13 @@ const Draw = () => {
         </div>
       </div>
       <div className="Hello">
-        {!showResult && (
-          <button type="button" onClick={randomDrawItem}>
-            {drawEnabled ? 'Draw!' : 'Drawing...'}
-          </button>
-        )}
+        <button type="button" onClick={randomDrawItem}>
+          {drawEnabled ? 'Draw!' : 'Drawing...'}
+        </button>
       </div>
-      {/* <div className="Hello">
+      <div className="Hello">
         <BackButton />
-      </div> */}
+      </div>
     </div>
   );
 };
