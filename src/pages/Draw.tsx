@@ -38,7 +38,7 @@ const Draw = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="Hello">
         {!showResult && (
           <TextLoop
@@ -52,8 +52,8 @@ const Draw = () => {
           />
         )}
         <div id="drawn-name">
-          {showResult && drawResult}
           <Confetti active={showResult} />
+          {showResult && drawResult}
         </div>
       </div>
       <div className="Hello">
@@ -64,7 +64,7 @@ const Draw = () => {
       <div className="Hello">
         <BackButton />
       </div>
-    </div>
+    </>
   );
 };
 
