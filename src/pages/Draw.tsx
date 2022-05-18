@@ -52,18 +52,20 @@ const Draw = () => {
           />
         )}
         <div id="drawn-name">
-          <Confetti active={showResult} />
           {showResult && drawResult}
+          <Confetti active={showResult} />
         </div>
       </div>
       <div className="Hello">
-        <button type="button" onClick={randomDrawItem}>
-          {drawEnabled ? 'Draw!' : 'Drawing...'}
-        </button>
+        {!showResult && (
+          <button type="button" onClick={randomDrawItem}>
+            {drawEnabled ? 'Draw!' : 'Drawing...'}
+          </button>
+        )}
       </div>
-      <div className="Hello">
+      {/* <div className="Hello">
         <BackButton />
-      </div>
+      </div> */}
     </div>
   );
 };
